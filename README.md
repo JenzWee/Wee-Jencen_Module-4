@@ -14,7 +14,7 @@ Your task is to create a ERC20 token and deploy it on the Avalanche network for 
 4. Checking token balance: Players should be able to check their token balance at any time.
 5. Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
 
-##Functionality 
+## Functionality 
 
 Here's the breakdown of the functionalities after the contract has been deployed.
 
