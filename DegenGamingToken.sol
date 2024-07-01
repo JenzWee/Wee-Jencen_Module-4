@@ -13,7 +13,6 @@ contract JencenGaming is ERC20 {
     mapping(uint256 => string) private _itemTypes; 
     uint256 private _nextItemId = 1;  
 
-    
     constructor() ERC20("Degen", "DGN") {
         owner = msg.sender;
         emit  OwnershipTransferred(address(0), owner);
