@@ -43,7 +43,7 @@ contract GamingToken is ERC20 {
     // Function to redeem tokens for in-game items, burns the tokens
     function redeem(uint256 amount, string memory item) public {
         require(balanceOf(msg.sender) >= amount, "Insufficient balance");
-        require(redemptionCounts[msg.sender] < 10, "Exceeded redemption limit");
+        require(redemptionCounts[msg.sender] < 10, "You have reach the maximum redeemable items per player");
 
         _burn(msg.sender, amount);
         redeemedItems[msg.sender].push(item);
