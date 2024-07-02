@@ -19,7 +19,7 @@ contract GameToken is ERC20 {
 
     mapping(address => uint256) private redemptionCounts;
 
-    constructor() ERC20("GameToken", "GT") {
+    constructor() ERC20("Degen", "DGN") {
         owner = msg.sender;
         emit OwnershipTransferred(address(0), owner);
     }
