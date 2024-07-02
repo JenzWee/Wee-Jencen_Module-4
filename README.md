@@ -1,7 +1,7 @@
 # Wee-Jencen_Module-4
 
 ## Overview
-JencenGaming is an ERC20 token contract built on the Ethereum blockchain using Solidity. The token is named "Degen" with the symbol "DGN". 
+GameToken is an ERC20 token contract built on the Ethereum blockchain using Solidity. The token is named "Degen" with the symbol "DGN". 
 This contract includes additional functionalities for minting, burning tokens, transferring ownership, and redeeming in-game items.
 
 ## Challenges 
