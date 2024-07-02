@@ -18,13 +18,11 @@ contract JencenGaming is ERC20 {
         emit  OwnershipTransferred(address(0), owner);
     }
 
-    
     function mint(address _to, uint256 _amount) public returns (bool) {
         _mint(_to, _amount);
         return true;
     }
 
-    
     function burn(uint256 _amount) public returns (bool) {
         _burn(msg.sender, _amount);
         return true;
@@ -47,14 +45,14 @@ contract JencenGaming is ERC20 {
         return true;
     }
 
-    function getItemCount(address player) public view returns (uint256) {
-        return _itemCounts[player];
+    event ItemRedeemed(address indexed user, uint256 indexed itemId, uint256 quantity, string itemType);
+
+    function getItemCount(address user) public view returns (uint256) {
+        return _itemCounts[user];
     }   
 
-    function getRedeemedItems(address player, uint256 itemId) public view returns (uint256, uint256, string memory) {
-        return (_redeemedItems[player][itemId], itemId, _itemTypes[itemId]);
+    function getRedeemedItems(address user, uint256 itemId) public view returns (uint256, uint256, string memory) {
+        return (_redeemedItems[user][itemId], itemId, _itemTypes[itemId]);
     }
-
-    event ItemRedeemed(address indexed player, uint256 indexed itemId, uint256 quantity, string itemType);
 
 }
