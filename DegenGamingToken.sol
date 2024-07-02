@@ -34,7 +34,7 @@ contract GameToken is ERC20 {
 
     function redeem(uint256 amount, string memory item) public {
         require(balanceOf(msg.sender) >= amount, "Insufficient balance");
-        require(redemptionCounts[msg.sender] < 10, "You have reach the maximum redeemable items per player");
+        require(redemptionCounts[msg.sender] + 1 <= 10, "You have reach the maximum redeemable items per player");
 
         _burn(msg.sender, amount);
         redeemedItems[msg.sender].push(item);
